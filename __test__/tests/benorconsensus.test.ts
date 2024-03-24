@@ -1,10 +1,10 @@
 import * as http from "http";
+import { BASE_NODE_PORT } from "../../src/config";
 import { launchNetwork } from "../../src/index";
 import { startConsensus, stopConsensus } from "../../src/nodes/consensus";
-import { delay } from "../../src/utils";
-import { BASE_NODE_PORT } from "../../src/config";
-import { getNodesState, reachedFinality } from "./utils";
 import { Value } from "../../src/types";
+import { delay } from "../../src/utils";
+import { getNodesState, reachedFinality } from "./utils";
 
 function generateRandomValue() {
   return Math.round(Math.random()) as 0 | 1;
